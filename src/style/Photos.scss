@@ -1,0 +1,40 @@
+.photos {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 185px));
+    text-align: center;
+    place-items: center;
+    grid-gap: 15px;
+  }
+  &__item {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #424242;
+    border-radius: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    & img {
+      margin-top: auto;
+    }
+  }
+  &__overlay {
+    position: absolute;
+    z-index: 9;
+    background-color: #1b1b1bd9;
+    transition: 0.4s;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+}
